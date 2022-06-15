@@ -1,2 +1,6 @@
-# roman-dotfiles, inherited from treedy-dotfiles
-Personal dot (.*) files for Linux
+# Workstation bootstrap
+
+Scripts for bootstrapping workstation with different operating systems:
+
+- [Windows](./windows/README.md)
+- [Linux](./linux/README.md)

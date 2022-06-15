@@ -1,0 +1,45 @@
+# cat alias
+alias ccat='colorize_cat' # require colorize zsh plugin
+
+# find / grep aliases
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS}'
+
+# ls aliases
+alias l='ls -lFh'
+alias la='ls -lAFh'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias lr='ls -tRFh'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Git aliases
+alias gs='git status'
+alias gpull='git pull --ff-only'
+alias gpush='git push'
+alias gcam='git commit -am'
+alias gdlb='git branch --merged | grep -i kawofong | xargs git branch -d'
+
+# Docker aliases
+alias dpsa='docker ps -a'
+alias dps='docker ps'
+alias dprune='docker images prune'
+alias drmidangle='docker rmi $(docker images -f "dangling=true" -q)'
+
+# Terraform aliases
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tfd='terraform destroy'
+alias tff='terraform fmt'
+alias tfi='terraform init'
+alias tfo='terraform output'
+alias tfp='terraform plan'
+alias yytfa='terraform apply -auto-approve'
+alias tfaa='terraform apply -auto-approve'
