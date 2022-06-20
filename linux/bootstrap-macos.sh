@@ -322,6 +322,11 @@ configure_macos() {
     info "macOS configuration completed."
 }
 
+install_npm_packages() {
+  npm install -g firebase-tools
+}
+
+##############################################################################
 # Runtime
 ##############################################################################
 
@@ -333,6 +338,7 @@ install_zsh_extensions
 install_python_modules
 install_homebrew_casks
 install_vscode_extensions
+install_npm_packages
 configure_macos
 
 info "You will have to re-login for new macOS configurations to take effect"
