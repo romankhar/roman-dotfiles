@@ -80,14 +80,18 @@ PYTHON_PACKAGES=(
     # virtualenvwrapper
 )
 
+# To see the list of installed extensions, run: 
+# $> code --list-extensions
 VSCODE_EXTENSIONS=(
     # -- General
+    42Crunch.vscode-openapi
+    christian-kohler.npm-intellisense
     christian-kohler.path-intellisense
     EditorConfig.EditorConfig
     ms-vscode-remote.remote-ssh
     # ms-vsliveshare.vsliveshare
     shan.code-settings-sync
-    HookyQR.beautify
+    shakram02.bash-beautify
     tomoki1207.pdf
     visualstudioexptteam.vscodeintellicode
     wayou.vscode-todo-highlight
@@ -111,48 +115,46 @@ VSCODE_EXTENSIONS=(
     # -- Shell
     foxundermoon.shell-format
     timonwong.shellcheck
-    # Kubernetes
+    # -- Kubernetes
     # ipedrazas.kubernetes-snippets
-    # ms-azuretools.vscode-docker
+    ms-azuretools.vscode-docker
     # -- Terraform
     hashicorp.terraform
     # -- Theme
     nimda.deepdark-material
     pkief.material-icon-theme
-    # ---------
-    # codezombiech.gitignore
+    codezombiech.gitignore
     DavidAnson.vscode-markdownlint
     DotJoshJohnson.xml
     eamodio.gitlens
     ecmel.vscode-html-css
     esbenp.prettier-vscode
-    # googlecloudtools.cloudcode
-    # GrapeCity.gc-excelviewer
+    googlecloudtools.cloudcode
+    GrapeCity.gc-excelviewer
     # keyring.Lua
-    # matangover.mypy
-    # ms-azuretools.vscode-docker
-    # ms-toolsai.jupyter
-    # ms-toolsai.jupyter-keymap
-    # ms-toolsai.jupyter-renderers
-    # ms-vscode-remote.remote-containers
-    # ms-vscode-remote.remote-ssh
-    # ms-vscode-remote.remote-ssh-edit
-    # ms-vscode-remote.remote-wsl
-    # ms-vscode-remote.vscode-remote-extensionpack
+    matangover.mypy
+    ms-toolsai.jupyter
+    ms-toolsai.jupyter-keymap
+    ms-toolsai.jupyter-renderers
+    ms-vscode-remote.remote-containers
+    ms-vscode-remote.remote-ssh
+    ms-vscode-remote.remote-ssh-edit
+    ms-vscode-remote.remote-wsl
+    ms-vscode-remote.vscode-remote-extensionpack
     peterj.proto
     redhat.java
-    # redhat.vscode-xml
-    # redhat.vscode-yaml
+    redhat.vscode-xml
+    redhat.vscode-yaml
     # Remisa.shellman
     # streetsidesoftware.code-spell-checker
     # sumneko.lua
-    # tht13.html-preview-vscode
-    # VisualStudioExptTeam.vscodeintellicode
-    vscjava.vscode-java-debug
-    vscjava.vscode-java-dependency
-    vscjava.vscode-java-pack
-    vscjava.vscode-java-test
-    vscjava.vscode-maven    
+    tht13.html-preview-vscode
+    VisualStudioExptTeam.vscodeintellicode
+    # vscjava.vscode-java-debug
+    # vscjava.vscode-java-dependency
+    # vscjava.vscode-java-pack
+    # vscjava.vscode-java-test
+    # vscjava.vscode-maven    
 )
 
 ##############################################################################
