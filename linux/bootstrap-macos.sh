@@ -80,7 +80,7 @@ PYTHON_PACKAGES=(
     # virtualenvwrapper
 )
 
-# To see the list of installed extensions, run: 
+# To see the list of installed extensions, run:
 # $> code --list-extensions
 VSCODE_EXTENSIONS=(
     # -- General
@@ -154,7 +154,7 @@ VSCODE_EXTENSIONS=(
     # vscjava.vscode-java-dependency
     # vscjava.vscode-java-pack
     # vscjava.vscode-java-test
-    # vscjava.vscode-maven    
+    # vscjava.vscode-maven
 )
 
 ##############################################################################
@@ -238,7 +238,7 @@ install_zsh_extensions() {
 install_python_modules() {
     info "Updating pip..."
     python3 -m pip install --upgrade pip
-    
+
     info "Installing Python modules..."
     pip3 install --user "${PYTHON_PACKAGES[@]}"
     info "Python modules installation completed."

@@ -166,3 +166,6 @@ autoload -U compinit && compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Make sure that Google version of git is first on the path
+export PATH="/usr/local/git/current/bin:$PATH"

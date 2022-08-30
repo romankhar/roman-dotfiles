@@ -1,6 +1,6 @@
 [user]
-	name = romankhar
-	email = kharkovski@gmail.com
+	name = Roman Kharkovski
+	email = kharkovski@google.com
 [github]
 	user = romankhar
 [color]
@@ -14,3 +14,5 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
+[url "sso://partner-code/"]
+	insteadof = https://partner-code.googlesource.com/
