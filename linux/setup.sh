@@ -20,6 +20,7 @@ set -o pipefail
 # Turn on traces, useful while debugging but commented out by default
 # set -o xtrace
 
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ### Import
 ##############################################################################
 
@@ -33,7 +34,7 @@ backup_file() {
         mv "${HOME}/$1" "${HOME}/$1.bak"
         info "${HOME}/$1 backed up."
     fi
-    ln -s "${HOME}/roman-dotfiles/linux/$1" "${HOME}/$1"
+    ln -s "${BASE_DIR}/$1" "${HOME}/$1"
     info "Setup for $1 complete. Symbolic link created."
 }
 
@@ -70,7 +71,7 @@ bootstrap_projects() {
 
 info "Bootstrap starting. You may be asked for your password (for sudo)."
 backup_dotfiles
-generate_git_ssh_key
+# generate_git_ssh_key
 bootstrap_projects
 
 # Debian/Ubuntu based systems
@@ -80,7 +81,7 @@ if [ -f "/etc/debian_version" ]; then
         source ./bootstrap-raspbian.sh
     else
         info "Debian/Ubuntu based systems found. Bootstrapping system..."
-        # source ./bootstrap-debian.sh
+        source ./bootstrap-debian.sh
     fi
 fi
 

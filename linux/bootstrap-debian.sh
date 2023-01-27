@@ -34,19 +34,20 @@ PACKAGES=(
     curl
     git-all
     gnupg
+    vim
     jq
-    kubectl
+    # kubectl
     lsb-release
     nodejs
     npm
     openjdk-11-jdk
     # Python 3
-    python3
-    python3-pip
-    build-essential
-    libssl-dev
-    libffi-dev
-    python3-dev
+    # python3
+    # python3-pip
+    # build-essential
+    # libssl-dev
+    # libffi-dev
+    # python3-dev
     # end Python 3
     software-properties-common
     zsh
@@ -55,11 +56,11 @@ PACKAGES=(
 PYTHON_PACKAGES=(
     autopep8
     flake8
-    ipython
-    virtualenv
-    virtualenvwrapper
-    functions-framework
 )
+    # ipython
+    # virtualenv
+    # virtualenvwrapper
+    # functions-framework
 
 ### Function
 ##############################################################################
@@ -69,7 +70,7 @@ install_apt_packages() {
     sudo apt update
     info "Installing apt packages..."
     sudo apt install -y "${PACKAGES[@]}"
-    info "Apt packages installation completes."
+    info "Apt packages installation completed."
 }
 
 install_oh_my_zsh() {
@@ -98,7 +99,7 @@ install_zsh_extensions() {
         git clone https://github.com/brymck/print-alias ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/print-alias | zsh
     fi
 
-    info "Zsh extensions installation completes."
+    info "Zsh extensions installation completed."
 }
 
 install_docker() {
@@ -112,7 +113,7 @@ install_docker() {
     info "Set up the docker stable repository."
     sudo apt update
     sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-    info "Docker installation completes."
+    info "Docker installation completed."
 }
 
 install_google_cloud_sdk() {
@@ -121,20 +122,20 @@ install_google_cloud_sdk() {
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
     info "Imported the Google Cloud public key."
     sudo apt-get update && sudo apt-get install google-cloud-sdk
-    info "Google Cloud SDK installation completes."
+    info "Google Cloud SDK installation completed."
 }
 
 install_python3_8() {
     sudo add-apt-repository ppa:deadsnakes/ppa
     info "Added deadsnakes Linux repository."
     sudo apt-get update && sudo apt-get install python3.8
-    info "Python 3.8 installation completes."
+    info "Python 3.8 installation completed."
 }
 
 install_python_modules() {
     info "Installing Python modules..."
     pip3 install --user "${PYTHON_PACKAGES[@]}"
-    info "Python modules installation completes."
+    info "Python modules installation completed."
 }
 
 install_terraform() {
@@ -143,7 +144,7 @@ install_terraform() {
     sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
     info "Added the official HashiCorp Linux repository."
     sudo apt-get update && sudo apt-get install terraform
-    info "Terraform installation completes."
+    info "Terraform installation completed."
 }
 
 ### Runtime
@@ -152,8 +153,12 @@ install_terraform() {
 install_apt_packages
 install_oh_my_zsh
 install_zsh_extensions
-install_docker
+# install_docker
 install_google_cloud_sdk
 # install_python3_8 # optional. If you need python 3.8
-install_python_modules
-install_terraform
+# install_python_modules
+# install_terraform
+
+info "You will have to re-login for new macOS configurations to take effect"
+info "You will have to manually configure some settings like night shift"
+info "After logging in and out, please run the command: 'p10k configure'"
