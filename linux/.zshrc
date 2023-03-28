@@ -169,3 +169,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Make sure that Google version of git is first on the path
 export PATH="/usr/local/git/current/bin:$PATH"
+
+# Autocomplete color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a0a0a0"

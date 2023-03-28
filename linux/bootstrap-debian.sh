@@ -42,8 +42,8 @@ PACKAGES=(
     npm
     openjdk-11-jdk
     # Python 3
-    # python3
-    # python3-pip
+    python3
+    python3-pip
     # build-essential
     # libssl-dev
     # libffi-dev
