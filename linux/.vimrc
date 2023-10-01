@@ -117,6 +117,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 " More color schemes
 Plugin 'flazz/vim-colorschemes'
+"Plugin 'catppuccin/nvim', {'name': 'catppuccin'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -148,7 +149,8 @@ let g:airline_section_z = '%4l/%L:%03c'
 set t_Co=256
 
 " Set the color scheme provided by a plugin
-colorscheme twilight256
+"colorscheme catppuccin
+colorscheme slate
 
 
 " UltiSnips settings

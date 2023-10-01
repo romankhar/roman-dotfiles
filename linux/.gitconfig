@@ -1,6 +1,6 @@
 [user]
 	name = Roman Kharkovski
-	email = kharkovski@google.com
+	email = kharkovski@gmail.com
 [github]
 	user = romankhar
 [color]
@@ -12,7 +12,3 @@
     tool = vscode-difftool
 [difftool "vscode-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
-[credential "https://source.developers.google.com"]
-	helper = gcloud.sh
-[url "sso://partner-code/"]
-	insteadof = https://partner-code.googlesource.com/

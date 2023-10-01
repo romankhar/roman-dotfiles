@@ -5,8 +5,8 @@
 1. Clone repo and run bootstrap script
 
     ```bash
-    cd ~ 
-    git clone https://github.com/...../bootstrap.git
-    cd bootstrap/linux
+    cd ~
+    git clone https://github.com/romankhar/roman-dotfiles.git
+    cd roman-dotfiles/linux
     ./setup.sh
     ```

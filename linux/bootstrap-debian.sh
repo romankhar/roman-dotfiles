@@ -159,6 +159,6 @@ install_google_cloud_sdk
 # install_python_modules
 # install_terraform
 
-info "You will have to re-login for new macOS configurations to take effect"
-info "You will have to manually configure some settings like night shift"
-info "After logging in and out, please run the command: 'p10k configure'"
+info "You will have to re-login for new configurations to take effect."
+info "You will have to manually configure some settings like night shift."
+info "After logging in and out, please run the command: 'p10k configure'."

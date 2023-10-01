@@ -46,3 +46,4 @@ alias tfaa='terraform apply -auto-approve'
 
 # Development
 alias python="python3"
+alias docker="podman"

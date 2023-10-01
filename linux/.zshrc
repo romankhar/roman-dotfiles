@@ -34,10 +34,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -172,3 +172,6 @@ export PATH="/usr/local/git/current/bin:$PATH"
 
 # Autocomplete color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a0a0a0"
+
+# Add ssh key for GitHub
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519_github

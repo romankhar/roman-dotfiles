@@ -50,13 +50,17 @@ HOMEBREW_FORMULAE=(
     dockutil
     git
     jq
-    java
-#    kubectl
+    # java
+    # kubectl
     node
-    python@3.9
+    npm
+    python3
     shellcheck
+    podman
+    podman-desktop
     tree
     watch
+    vim
     wget
     xz
     zsh
@@ -64,9 +68,10 @@ HOMEBREW_FORMULAE=(
 )
 
 HOMEBREW_CASKS=(
-    docker
+    # docker
     google-cloud-sdk
     iterm2
+    warp
     visual-studio-code
     # pipenv
     # postman
@@ -75,81 +80,84 @@ HOMEBREW_CASKS=(
 PYTHON_PACKAGES=(
     autopep8
     flake8
-    ipython
-    # virtualenv
-    # virtualenvwrapper
+    # ipython
 )
 
 # To see the list of installed extensions, run:
 # $> code --list-extensions
 VSCODE_EXTENSIONS=(
     # -- General
-    42Crunch.vscode-openapi
-    christian-kohler.npm-intellisense
+    github.copilot
+    github.copilot-labs
+    github.copilot-chat
+    #42Crunch.vscode-openapi
+    #christian-kohler.npm-intellisense
     christian-kohler.path-intellisense
     EditorConfig.EditorConfig
-    ms-vscode-remote.remote-ssh
+    dbaeumer.vscode-eslint
+    #ms-vscode-remote.remote-ssh
     # ms-vsliveshare.vsliveshare
-    shan.code-settings-sync
-    shakram02.bash-beautify
-    tomoki1207.pdf
-    visualstudioexptteam.vscodeintellicode
-    wayou.vscode-todo-highlight
+    #shan.code-settings-sync
+    #shakram02.bash-beautify
+    #tomoki1207.pdf
+    #visualstudioexptteam.vscodeintellicode
+    #wayou.vscode-todo-highlight
     # -- Git
-    codezombiech.gitignore
-    donjayamanne.githistory
+    #codezombiech.gitignore
+    #donjayamanne.githistory
     eamodio.gitlens
     waderyan.gitblame
     # -- Markdown
     yzhang.markdown-all-in-one
+    DavidAnson.vscode-markdownlint
     # -- Web / node
-    Zignd.html-css-class-completion
-    christian-kohler.npm-intellisense
-    dbaeumer.jshint
-    eg2.vscode-npm-script
-    mohsen1.prettify-json
-    kamikillerto.vscode-colorize
+    #Zignd.html-css-class-completion
+    #christian-kohler.npm-intellisense
+    #dbaeumer.jshint
+    #eg2.vscode-npm-script
+    #mohsen1.prettify-json
+    #kamikillerto.vscode-colorize
     # -- Python
-    ms-python.python
-    ms-python.vscode-pylance
+    ms-python.autopep8
+    #ms-python.vscode-pylance
     # -- Shell
     foxundermoon.shell-format
-    timonwong.shellcheck
+    #timonwong.shellcheck
     # -- Kubernetes
     # ipedrazas.kubernetes-snippets
     ms-azuretools.vscode-docker
     # -- Terraform
     hashicorp.terraform
     # -- Theme
-    nimda.deepdark-material
-    pkief.material-icon-theme
-    codezombiech.gitignore
-    DavidAnson.vscode-markdownlint
-    DotJoshJohnson.xml
-    eamodio.gitlens
+    #nimda.deepdark-material
+    #pkief.material-icon-theme
+    #codezombiech.gitignore
+    #DotJoshJohnson.xml
+    #eamodio.gitlens
     ecmel.vscode-html-css
     esbenp.prettier-vscode
-    googlecloudtools.cloudcode
-    GrapeCity.gc-excelviewer
+    #googlecloudtools.cloudcode
+    #GrapeCity.gc-excelviewer
     # keyring.Lua
-    matangover.mypy
-    ms-toolsai.jupyter
-    ms-toolsai.jupyter-keymap
-    ms-toolsai.jupyter-renderers
-    ms-vscode-remote.remote-containers
-    ms-vscode-remote.remote-ssh
-    ms-vscode-remote.remote-ssh-edit
-    ms-vscode-remote.remote-wsl
-    ms-vscode-remote.vscode-remote-extensionpack
-    peterj.proto
-    redhat.java
-    redhat.vscode-xml
-    redhat.vscode-yaml
+    #matangover.mypy
+    #ms-toolsai.jupyter
+    #ms-toolsai.jupyter-keymap
+    #ms-toolsai.jupyter-renderers
+    #ms-vscode-remote.remote-containers
+    #ms-vscode-remote.remote-ssh
+    #ms-vscode-remote.remote-ssh-edit
+    #ms-vscode-remote.remote-wsl
+    #ms-vscode-remote.vscode-remote-extensionpack
+    #peterj.proto
+    #redhat.java
+    #redhat.vscode-xml
+    #redhat.vscode-
+    docsmsft.docs-yaml
     # Remisa.shellman
-    # streetsidesoftware.code-spell-checker
+    streetsidesoftware.code-spell-checker
     # sumneko.lua
-    tht13.html-preview-vscode
-    VisualStudioExptTeam.vscodeintellicode
+    #tht13.html-preview-vscode
+    #VisualStudioExptTeam.vscodeintellicode
     # vscjava.vscode-java-debug
     # vscjava.vscode-java-dependency
     # vscjava.vscode-java-pack
@@ -162,18 +170,18 @@ VSCODE_EXTENSIONS=(
 ##############################################################################
 setup_macos() {
     # Change ownership of these directories to your user
-    sudo chown -R $(whoami) /usr/local/bin \
-        /usr/local/etc \
-        /usr/local/sbin \
-        /usr/local/share \
-        /usr/local/share/doc
+    #sudo chown -R $(whoami) /usr/local/bin \
+    #    /usr/local/etc \
+    #    /usr/local/sbin \
+    #    /usr/local/share \
+    #    /usr/local/share/doc
 
     # Add user write permission to these directories
-    chmod u+w /usr/local/bin \
-        /usr/local/etc \
-        /usr/local/sbin \
-        /usr/local/share \
-        /usr/local/share/doc
+    #chmod u+w /usr/local/bin \
+    #    /usr/local/etc \
+    #    /usr/local/sbin \
+    #    /usr/local/share \
+    #    /usr/local/share/doc
 
     xcode-select --install || true # required for homebrew
     echo -n "Press any key to continue after xcode installation finishes (may take 20+ minutes)."
@@ -257,6 +265,15 @@ install_vscode_extensions() {
     fi
 }
 
+# Install vim Vundle and plugins
+install_vim_plugins() {
+    mkdir -p "${HOME}/.vim/bundle"
+    if [ ! -d "${HOME}/.vim/bundle/Vundle.vim" ]; then
+        info "Installing Vundle..."
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    fi
+}
+
 configure_macos() {
     info "Configuring macOS..."
     # Set fast key repeat rate
@@ -265,6 +282,10 @@ configure_macos() {
     # InitialKeyRepeat: 120, 94, 68, 35, 25, 15
     defaults write NSGlobalDomain KeyRepeat -int 2
     defaults write NSGlobalDomain InitialKeyRepeat -int 35
+
+    # Customize Home, End and other key actions
+    mkdir -p ~/Library/KeyBindings
+    cp ./macos/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
 
     # Set Dark theme
     defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
@@ -318,14 +339,27 @@ configure_macos() {
     dockutil --add '' --type spacer --section apps --after "System Preferences"
     dockutil --add "/Applications/Google Chrome.app"
     dockutil --add "/Applications/Visual Studio Code.app"
-    dockutil --add "/Applications/iTerm.app"
     killall Dock
 
     info "macOS configuration completed."
 }
 
 install_npm_packages() {
-  npm install -g firebase-tools
+    npm install -g firebase-tools
+}
+
+install_chrome() {
+    info "Skipping Chrome installation..."
+    #   mkdir -p /tmp/chrome_download
+    #   cd /tmp/chrome_download
+    #   wget https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg ./
+    #   open ./googlechrome.dmg
+    #   sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
+}
+
+configure_podman() {
+    podman machine init
+    podman machine start
 }
 
 ##############################################################################
@@ -335,14 +369,17 @@ install_npm_packages() {
 setup_macos
 install_homebrew
 install_homebrew_formulae
+install_homebrew_casks
 install_oh_my_zsh
 install_zsh_extensions
 install_python_modules
-install_homebrew_casks
 install_vscode_extensions
 install_npm_packages
+install_vim_plugins
+install_chrome
+configure_podman
 configure_macos
 
-info "You will have to re-login for new macOS configurations to take effect"
-info "You will have to manually configure some settings like night shift"
-info "After logging in and out, please run the command: 'p10k configure'"
+info "You will have to re-login for new MacOS configurations to take effect."
+info "You will have to manually configure some settings like night shift."
+info "After logging in and out, please run the command: 'p10k configure'."
